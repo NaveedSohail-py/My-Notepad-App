@@ -34,30 +34,52 @@ file = tk.Menu(main_menu, tearoff=False)
 
 #edit
 #edit icons
-copy_icon = tk.PhotoImage(file='icons2/copy.png')
-paste_icon = tk.PhotoImage(file='icons2/paste.png')
-cut_icon = tk.PhotoImage(file='icons2/cut.png')
-clear_all_icon = tk.PhotoImage(file='icons2/clear_all.png')
-find_icon = tk.PhotoImage(file='icons2/find.png')
+copy_icon_path = os.path.join(base_dir, 'icons2', 'copy.png')
+paste_icon_path = os.path.join(base_dir, 'icons2', 'paste.png')
+cut_icon_path = os.path.join(base_dir, 'icons2', 'cut.png')
+clear_all_icon_path = os.path.join(base_dir, 'icons2', 'clear_all.png')
+find_icon_path = os.path.join(base_dir, 'icons2', 'find.png')
+
+
+
+copy_icon = tk.PhotoImage(file=copy_icon_path)
+paste_icon = tk.PhotoImage(file=paste_icon_path )
+cut_icon = tk.PhotoImage(file=cut_icon_path)
+clear_all_icon = tk.PhotoImage(file=clear_all_icon_path)
+find_icon = tk.PhotoImage(file=find_icon_path)
 
 
 edit = tk.Menu(main_menu, tearoff=False)
 
 
 ##### View Icon
-tool_bar_icon = tk.PhotoImage(file='icons2/tool_bar.png')
-status_bar_icon = tk.PhotoImage(file='icons2/status_bar.png')
+tool_bar_icon_path = os.path.join(base_dir, 'icons2', 'tool_bar.png')
+status_bar_icon_path = os.path.join(base_dir, 'icons2', 'status_bar.png')
+
+
+tool_bar_icon = tk.PhotoImage(file=tool_bar_icon_path)
+status_bar_icon = tk.PhotoImage(file=status_bar_icon_path)
+
 
 view = tk.Menu(main_menu, tearoff=False)
 
 
 #Color THeme
-light_default_icon = tk.PhotoImage(file='icons2/light_default.png')
-light_plus_icon = tk.PhotoImage(file='icons2/light_plus.png')
-dark_icon = tk.PhotoImage(file='icons2/dark.png')
-red_icon = tk.PhotoImage(file='icons2/red.png')
-monokai_icon = tk.PhotoImage(file='icons2/monokai.png')
-night_blue_icon = tk.PhotoImage(file='icons2/night_blue.png')
+light_default_icon_path = os.path.join(base_dir, 'icons2', 'light_default.png')
+light_plus_icon_path = os.path.join(base_dir, 'icons2', 'light_plus.png')
+dark_icon_path = os.path.join(base_dir, 'icons2', 'dark.png')
+red_icon_path = os.path.join(base_dir, 'icons2', 'red.png')
+monokai_icon_path = os.path.join(base_dir, 'icons2', 'monokai.png')
+night_blue_icon_path = os.path.join(base_dir, 'icons2', 'night_blue.png')
+
+
+light_default_icon = tk.PhotoImage(file=light_default_icon_path)
+light_plus_icon = tk.PhotoImage(file=light_plus_icon_path)
+dark_icon = tk.PhotoImage(file=dark_icon_path)
+red_icon = tk.PhotoImage(file=red_icon_path)
+monokai_icon = tk.PhotoImage(file=monokai_icon_path)
+night_blue_icon = tk.PhotoImage(file=night_blue_icon_path)
+
 color_theme = tk.Menu(main_menu, tearoff=False)
 
 theme_choice = tk.StringVar()
