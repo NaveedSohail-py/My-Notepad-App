@@ -12,11 +12,21 @@ main_application.title('Vpad Text Editor')
 # ========================== End Main Menu =====================================
 main_menu = tk.Menu()
 #file icons
-new_icon = tk.PhotoImage(file='icons2/new.png')
-open_icon = tk.PhotoImage(file='icons2/open.png')
-save_icon = tk.PhotoImage(file='icons2/save.png')
-save_as_icon = tk.PhotoImage(file='icons2/save_as.png')
-exit_icon = tk.PhotoImage(file='icons2/exit.png')
+base_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Correct paths to the images in the icons2 folder
+new_icon_path = os.path.join(base_dir, 'icons2', 'new.png')
+open_icon_path = os.path.join(base_dir, 'icons2', 'open.png')
+save_icon_path = os.path.join(base_dir, 'icons2', 'save.png')
+save_as_icon_path = os.path.join(base_dir, 'icons2', 'save_as.png')
+exit_icon_path = os.path.join(base_dir, 'icons2', 'exit.png')
+
+# Load the images using the correct paths
+new_icon = tk.PhotoImage(file=new_icon_path)
+open_icon = tk.PhotoImage(file=open_icon_path)
+save_icon = tk.PhotoImage(file=save_icon_path)
+save_as_icon = tk.PhotoImage(file=save_as_icon_path)
+exit_icon = tk.PhotoImage(file=exit_icon_path)
 
 
 file = tk.Menu(main_menu, tearoff=False)
